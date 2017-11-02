@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/question/question",
+    "pages/result/result",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "开源许可证",
+    "navigationBarTextStyle": "black"
+  }
+}

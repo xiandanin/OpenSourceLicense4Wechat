@@ -1,0 +1,13 @@
+<!--pages/result.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">{{show_result.license_name}}</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__p">{{show_result.description}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

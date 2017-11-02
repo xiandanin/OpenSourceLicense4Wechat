@@ -1,0 +1,13 @@
+<template name="quesion_item">
+  <view class="page__bd" id="v_{{index}}">
+    <view class="weui-cells__title">{{title}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-check__label" wx:for="{{choose}}" wx:for-index="{{item_index}}" wx:key="{{item_index}}">
+        <view class="weui-cell__bd" bindtap='radioChange' data-id="{{item.id}}" data-redirect-id="{{item.redirect_id}}" data-question-index="{{index}}" data-result-id="{{item.result_id}}">{{item.content}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+          <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

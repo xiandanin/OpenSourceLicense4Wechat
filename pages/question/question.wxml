@@ -1,0 +1,7 @@
+<import src="quesion_item.wxml" />
+<!--style="height:{{srollHeight}}px"-->
+<scroll-view scroll-y="true"  scroll-with-animation="true" scroll-into-view="{{scroll_into_view}}" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view wx:for="{{show_questions}}" wx:key="{{index}}">
+    <template is="quesion_item" data="{{...item,index}}" />
+  </view>
+</scroll-view>
