@@ -1,1 +1,47 @@
 /* pages/result.wxss */
+
+.weui-flex__item {
+  text-align: center;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.border-top {
+  border-top: 1rpx solid #ddd;
+}
+
+.border-right {
+  border-right: 1rpx solid #ddd;
+}
+
+.permission-text {
+  color: #33bf2a;
+}
+
+.option-label {
+  margin-left: 13rpx;
+}
+
+.icon-box-parent {
+  margin-bottom: 2%;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+}
+
+.icon-box__ctn {
+  flex-shrink: 100;
+}
+
+.icon-box__title {
+  line-height: 80%;
+  font-size: 14px;
+}
+
+.icon-box__desc {
+  line-height: 120%;
+  font-size: 10px;
+  margin-left: 46rpx;
+  color: #888;
+}

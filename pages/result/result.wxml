@@ -1,13 +1,75 @@
 <!--pages/result.wxml-->
 <view class="page">
-    <view class="page__bd">
-        <view class="weui-article">
-            <view class="weui-article__h1">{{show_result.license_name}}</view>
-            <view class="weui-article__section">
-                <view class="weui-article__section">
-                    <view class="weui-article__p">{{show_result.description}}</view>
-                </view>
+
+  <view class="page__bd">
+    <view class="weui-article">
+
+      <!--描述-->
+      <view class="weui-article__h1">{{show_result.license_name}}</view>
+
+      <!--权限-->
+      <view class="weui-article__section">
+        <view class="weui-article__h2">权限：</view>
+        <view wx:for="{{show_result.permissions}}" wx:key="{{index}}">
+          <view class='icon-box-parent'>
+            <view class='icon-box'>
+              <icon type="success" size="16" />
+              <view class='icon-box__ctn option-label'>
+                <view class='icon-box__title'>{{item.name}}</view>
+              </view>
             </view>
+            <view class='icon-box__desc'>{{item.description}}</view>
+          </view>
         </view>
+      </view>
+
+      <!--条件-->
+      <view class="weui-article__section">
+        <view class="weui-article__h2">条件：</view>
+        <view wx:for="{{show_result.condition}}" wx:key="{{index}}">
+          <view class='icon-box-parent'>
+            <view class='icon-box'>
+              <icon type="info" size="16" />
+              <view class='icon-box__ctn option-label'>
+                <view class='icon-box__title'>{{item.name}}</view>
+              </view>
+            </view>
+            <view class='icon-box__desc'>{{item.description}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--限制-->
+      <view class="weui-article__section">
+        <view class="weui-article__h2">限制：</view>
+        <view wx:for="{{show_result.limit}}" wx:key="{{index}}">
+          <view class='icon-box-parent'>
+            <view class='icon-box'>
+              <icon type="warn" size="16" />
+              <view class='icon-box__ctn option-label'>
+                <view class='icon-box__title'>{{item.name}}</view>
+              </view>
+            </view>
+            <view class='icon-box__desc'>{{item.description}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--描述-->
+      <view class="weui-article__section">
+        <rich-text type="node" nodes="{{show_result.description}}" class="weui-article__p"></rich-text>
+      </view>
+
+      <!--链接-->
+      <view class="weui-article__section">
+        <view class="weui-article__h2">相关链接：</view>
+        <view wx:for="{{show_result.related_links}}" wx:key="{{index}}">
+          <text selectable style='width:100%'>{{item}}</text>
+        </view>
+      </view>
+
     </view>
+  </view>
+
+
 </view>

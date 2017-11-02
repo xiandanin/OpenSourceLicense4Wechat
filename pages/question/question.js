@@ -16,13 +16,12 @@ Page({
           {
             "id": 1,
             "content": "可以",
-            "checked": true,
-            "redirect_id": 2
+            "redirect_id": 3
           },
           {
             "id": 2,
             "content": "不可以",
-            "redirect_id": 3
+            "redirect_id": 2
           }
         ]
       },
@@ -163,7 +162,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
